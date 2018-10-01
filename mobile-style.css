@@ -1,0 +1,439 @@
+:root{
+    --main-color: #3F5D45;
+    --active-color: rgba(255,225,128);
+    --story-bg-color: #EAF0ED;
+    --story-font-color:#8DA291;
+
+}
+
+.maincolor {
+    color: var(--main-color);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif,Microsoft JhengHei;
+}
+
+
+.fluid_container{
+    max-width: 375px;
+    margin: 0 auto;
+    border: 1px solid #EAF0ED;
+}
+
+.desktop_header_layout{
+    display: none;
+}
+
+.mobile_header_layout{
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_logo{
+    width:40%;
+    height:17px;
+}
+
+
+.center_image_layout{
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+}
+
+.center_image{
+    flex-basis: 60%;
+    width: 100%;
+    height:50%;
+    background-image: url('./assets/annie-spratt-133872-unsplash.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: grey;
+}
+
+.center_intro{
+    flex-basis: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.intro_background{
+    position: relative;
+    z-index: 0;
+    width:33.3%;
+    height: 200px;
+    font-size:18px;
+    line-height: 1.5;
+    writing-mode: vertical-lr;
+    text-align: center;
+    letter-spacing: 8px;
+    padding-left:calc(38%/3);
+    padding-right:calc(38%/3);
+    color: white;
+    background-color: var(--main-color);
+}
+
+.intro_background:hover, .intro_active{
+    font-weight: 900;
+    background-color: var(--active-color);
+    color:var(--main-color);
+}
+
+.intro_left::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/food-photographer-jennifer-pallian-306919-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.3;
+    z-index: -2;
+}
+.intro_left{}
+
+.intro_center::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/annie-spratt-133872-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.3;
+    z-index: -2;
+}
+.intro_center{
+    margin: 0 1px;
+}
+
+.intro_right::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/amy-shamblen-784211-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.3;
+    z-index: -2;
+}
+.intro_right{}
+
+.story_layout{
+    width: 100%;
+}
+
+.story_title {
+    width: 60%;
+    height: 120px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin:0 auto ;
+}
+.story1_title{
+    background-image: url('./assets/sm-為什麼選擇了做甜點.svg');
+}
+
+.story2_title{
+    background-image: url('./assets/sm-為什麼一定要吃甜點.svg');
+}
+.story_center{
+    width: 48%;
+    height: 0;
+    padding-bottom: 48%;
+    margin:0;
+    overflow: hidden;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.story1_center {
+    background-image: url('./assets/le-buzz-576478-unsplash.jpg');
+}
+
+.story2_center {
+    background-image: url('./assets/monika-grabkowska-325047-unsplash.jpg');
+}
+
+.cart_title img{
+    width: 70%;
+    height: 72%;
+    margin: 30px calc(30%/2);
+}
+
+.story_center{
+    width: 100%;
+    height:350px;
+    overflow: hidden;
+    /*
+    background-image: url('./assets/le-buzz-576478-unsplash.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:120% auto;
+    */
+    background-color: grey;
+}
+
+.story_center img{
+    width: 100%;
+    height: 100%;
+}
+
+.story_detail{
+    padding: 8%;
+    font-size: 18px;
+    line-height: 2em;
+    letter-spacing: 3px;
+    background-color: var(--story-bg-color);
+    color: var(--story-font-color);
+}
+.cart{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.cart_title{
+    margin:30px auto 30px auto;
+    overflow: hidden;
+    width: 70%;
+    height: 150px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('./assets/sm-想吃甜點是不需要理由的.svg');
+}
+
+.cart_card{
+   width: 90%;
+   margin: 0 calc(10%/2);
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+.cart_special{
+    content: '';
+    z-index: 9999;
+    position: absolute;
+    top:0;
+    left:21px;
+    width: 90%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.cart_special_text{
+    font-size: 16px;
+    width: 12%;
+    height: 105px;
+    padding: 8px;
+    background-color: var(--main-color);
+    color: white;
+    writing-mode: vertical-lr;
+    letter-spacing: 6px;
+}
+.cart_mark {
+   font-size: 20px;
+   margin-top:20px;
+   margin-right:5%;
+}
+
+.cart_image{
+    flex-basis: auto;
+    height:350px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cart_image img{
+    width: 100%;
+    transform: translateY(-15%);
+    
+}
+
+.cart_detail{
+    flex-basis: 56px;
+    line-height: 56px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.cart_detail .name{
+    border:1px solid #EAF0ED;
+    flex-basis: 60%;
+    font-size: 24px;
+
+    letter-spacing: 2px;
+    color: var(--story-font-color);
+    text-align: center;
+}
+
+.cart_detail .price{
+    border:1px solid #EAF0ED;
+    flex-basis: 40%;
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.cart_button{
+    flex-basis: 65px;
+    line-height: 65px;
+    background-color: #EAF0ED;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subscript{
+    width: 100%;
+    height: 0;
+    padding: 0;
+    padding-bottom: 48%;
+    background-color: var(--main-color);   
+    position: relative;
+}
+
+.sub_title .light-logo{
+    position: absolute;
+    top:37px;
+    left:50px;
+    display: inline-block;
+    width: 40px;
+    height:40px;
+    background-image: url('./assets/logo-light.svg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sub_text{
+    position: absolute;
+    top:34px;
+    left:110px;
+    color:#EAF0ED;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.sub_input{
+    width:65%;
+    height:56px;
+    transform: translate(16%,100px);
+    background-color:#EAF0ED;
+    position: relative;
+}
+
+.sub_input:after{
+    position: absolute;
+    top:0;
+    left:100%;
+    content: '';
+    width: 56px;
+    height:56px;
+    background-image: url('./assets/arrow-right-solid.svg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+
+    background-color:var(--active-color);
+}
+
+#mail-icon{
+    margin-left:20px;
+    margin-top:24px;
+}
+
+.logo{
+    width:45%;
+    height:26px;
+    margin-left: 8%;
+    margin-top:35px;
+    margin-bottom: 35px;
+    margin-right: 0px;
+    overflow: hidden;
+}
+.logo img{
+    width: 100%;
+}
+
+.info{
+    width: 100%;
+    margin: 0;
+    margin-left: 8%;
+    margin-bottom: 35px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color:var(--main-color);
+}
+
+.social_logo{
+    width: 100%;
+    margin: 0;
+    margin-left: 8%;
+}
+
+.social_logo .icon{
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    margin-right:8px;
+    cursor: pointer;
+}
+
+.icon img{
+    width: 100%;
+}
+
+.copyright{
+    margin: 0;
+    margin-top:25px;
+    margin-left: 8%;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--main-color);
+}
+
+.slogan{
+    display: none;
+}

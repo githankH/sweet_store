@@ -1,0 +1,33 @@
+RWD
+responsive web design
+https://classroom.udacity.com/courses/ud893
+
+相對大小
+
+DPR
+
+DIP, device independent pixel (960)
+hardware pixel (1920)
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+media query
+media="screen and (max-width:375px)"
+
+flexbox
+https://flexboxfroggy.com
+
+display: flex
+
+
+
+<link rel=stylesheet type="text/css" 
+media="screen and (min-width:375px) and (max-width:1023px)" 
+href="./mobile-style.css">
+
+<link rel=stylesheet type="text/css" 
+media="screen and (min-width:1024px)" href="./desktop-style.css">
+ 
